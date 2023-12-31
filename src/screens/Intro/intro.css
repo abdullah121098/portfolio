@@ -1,0 +1,27 @@
+.introduction-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+   }
+   
+   .introduction-image {
+    width: 40%;
+    max-width: 500px;
+   }
+   
+   .introduction-text {
+    width: 40%;
+    text-align: justify;
+   }
+   
+   @media (max-width: 768px) {
+    .introduction-container {
+       flex-direction: column;
+    }
+   
+    .introduction-image, .introduction-text {
+       width: 100%;
+    }
+   }
