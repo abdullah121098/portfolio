@@ -1,36 +1,32 @@
 import React from 'react';
-import ProjectData from './data';
+import { ProjectData } from '../../assets/Resume';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
+import { PROJECT_COLUMNS } from '../../constants/Table/projectTable';
 import './project.css';
 
 const Project = () => {
     return (
-        <div className="container">
-            <h1>Project</h1>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Skills</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {ProjectData.map((project) => (
-                        <tr key={project.id}>
-                            <td>{project.title}</td>
-                            <td>{project.description}</td>
-                            <td>
-                                <ul>
-                                    {project.skills.map((skill) => (
-                                        <li key={skill}>{skill}</li>
-                                    ))}
-                                </ul>
-                            </td>
-                        </tr>
+        <TableContainer component={Paper} className="project-container">
+            <Typography variant='h6' className="project-text" >Project</Typography>
+            <Table>
+                <TableHead className="project-page">
+                    <TableRow>
+                        {PROJECT_COLUMNS.map((column) => (
+                            <TableCell className="project-text">{column.headerName}</TableCell>
+                        ))}
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {ProjectData.map((row) => (
+                        <TableRow>
+                            {PROJECT_COLUMNS.map((column) => (
+                                <TableCell>{row[column.field]}</TableCell>
+                            ))}
+                        </TableRow>
                     ))}
-                </tbody>
-            </table>
-        </div>
+                </TableBody>
+            </Table>
+        </TableContainer>
     );
 };
 

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Intro, Skill, About, Edu, Project, Contact } from '../../screens';
+import { Intro, Skill, About, Edu, Project, Contact, Exp } from '../../screens';
 
 function index() {
     return (
         <div>
             <Intro />
+            <Exp />
             <Project />
             <Edu />
             <Skill />

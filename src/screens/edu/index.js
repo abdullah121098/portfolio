@@ -1,5 +1,5 @@
 import React from 'react';
-import educationData from './edudata';
+import { EducationData } from '../../assets/Resume';
 import './edu.css';
 
 const Education = () => {
@@ -11,16 +11,18 @@ const Education = () => {
           <tr>
             <th>Degree</th>
             <th>Institution</th>
+            <th>Place</th>
             <th>Passing Year</th>
             <th>Percentage</th>
           </tr>
         </thead>
         <tbody>
-          {educationData.map((education, index) => (
+          {EducationData.map((education, index) => (
             <tr key={index}>
-              <td>{education.degree}</td>
+              <td>{education.title}</td>
               <td>{education.institution}</td>
-              <td>{education.passingYear}</td>
+              <td>{education.location}</td>
+              <td>{education.duration}</td>
               <td>{education.percentage}</td>
             </tr>
           ))}
