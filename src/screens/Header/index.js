@@ -10,8 +10,8 @@ const Header = () => {
             <AppBar position="fixed">
                 <Toolbar>
                     {/* <IconButton edge="start" color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton> */}
+                            <MenuIcon />
+                        </IconButton> */}
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Resume Builder
                     </Typography>
