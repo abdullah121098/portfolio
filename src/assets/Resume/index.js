@@ -125,10 +125,12 @@ export const SkillData = [
 //Experience
 export const ExpData = [
     {
-        company: "Techno India Pvt Ltd.",
-        role: "Software Developer Intern",
-        duration: "May 2020 - July 2020",
-        desc: `Worked on a project for an e-commerce website. Responsible for`,
+        company: "Dafy Online Pvt Ltd.",
+        role: "Front End Web Developer",
+        duration: "May 2023 - Present",
+        desc: `I was in charge of designing and managing websites
+        in React JS as a Front End Developer with expertise
+        at Dafy Online Pvt Ltd.`,
 
     }
 ];
