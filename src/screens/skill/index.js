@@ -31,38 +31,38 @@ const Skill = () => {
     };
 
     return (
-        <Box className="skill-page">
-            <Typography variant="h2">Skills</Typography>
-            <Stack className="skill-container" spacing={2}>
-                {SkillData.map(skill => (
-                    <Stack key={skill.id} className="skill" spacing={1}>
-                        <img
-                            src={skill.icon}
-                            alt="Loading..."
-                            style={{
-                                width: 60,
-                                height: 70,
-                                objectFit: "contain",
-                                paddingLeft: 20,
-                            }}
-                        />
-                        <Typography variant="h5">{skill.name}</Typography>
-                        {/* <Typography variant="body2">{skill.leve}</Typography> */}
-                        <Box sx={{ width: '100%', paddingTop: 1 }}>
-                            <LinearProgress
-                                variant="determinate"
-                                value={getProgressValue(skill.leve)}
-                                sx={{
-                                    '& .MuiLinearProgress-bar': {
-                                        backgroundColor: getProgressColor(skill.leve)
-                                    }
+        <Stack className='skill-container'>
+            <Box className='skill-page'>
+                <Typography variant="h4" align="center">Skills</Typography>
+                <Stack direction={{ xs: 'column', sm: 'row', }} className='skill' spacing={2}>
+                    {SkillData.map(skill => (
+                        <Stack key={skill.id} spacing={1} sx={{ margin: 5, padding: 5 }}>
+                            <img
+                                src={skill.icon}
+                                alt="Loading..."
+                                style={{
+                                    width: 60,
+                                    height: 70,
+                                    objectFit: "contain",
                                 }}
                             />
-                        </Box>
-                    </Stack>
-                ))}
-            </Stack>
-        </Box>
+                            <Typography variant="h5">{skill.name}</Typography>
+                            <Box sx={{ width: '100%', paddingTop: 1 }}>
+                                <LinearProgress
+                                    variant="determinate"
+                                    value={getProgressValue(skill.leve)}
+                                    sx={{
+                                        '& .MuiLinearProgress-bar': {
+                                            backgroundColor: getProgressColor(skill.leve)
+                                        }
+                                    }}
+                                />
+                            </Box>
+                        </Stack>
+                    ))}
+                </Stack>
+            </Box>
+        </Stack>
     );
 };
 
