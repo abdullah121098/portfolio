@@ -39,7 +39,6 @@ export const EducationData = [
 ];
 
 //Project
-
 export const ProjectData = [
     {
         id: 1,
@@ -90,34 +89,33 @@ export const ProjectData = [
 ];
 
 //Skill
-
 export const SkillData = [
     {
-        id:1,
+        id: 1,
         name: "HTML",
         icon: HTML,
         leve: 'Intermediate',
     },
     {
-        id:2,
+        id: 2,
         name: "PHP",
         icon: PHP,
         leve: 'Beginner',
     },
     {
-        id:3,
+        id: 3,
         name: "Python 3.x",
         icon: PY,
         leve: 'Beginner',
     },
     {
-        id:4,
+        id: 4,
         name: "BootStrap",
         icon: BS,
         leve: 'Beginner',
     },
     {
-        id:5,
+        id: 5,
         name: "React JS",
         icon: RJS,
         leve: 'Beginner',
@@ -125,7 +123,6 @@ export const SkillData = [
 ];
 
 //Experience
-
 export const ExpData = [
     {
         company: "Techno India Pvt Ltd.",
@@ -133,5 +130,27 @@ export const ExpData = [
         duration: "May 2020 - July 2020",
         desc: `Worked on a project for an e-commerce website. Responsible for`,
 
-    }   
+    }
+];
+
+//Intro
+export const IntroData = [
+    {
+        img: BS,
+        name: 'ABDULLAH M',
+        title: "Front End Web Developer",
+        address: `82/76 Aringer Anna Street, Shengottai, Tenkasi - 627809`,
+        phone: `+91 8489351923`,
+        email: `abdullah_m7@hotmail.com`,
+        Linkname: 'github',
+        link: 'https://github.com/abdullahm7',
+        Linkname2: 'twitter',
+        link2: '#',
+        self: `
+        I was in charge of designing and managing websites in React JS as 
+        a Front End Developer with expertise at Dafy Online Pvt Ltd. 
+        I've also utilized React JS to create interactive user interfaces. 
+        One of my major accomplishments was the development of a website using React JS.
+        In the future, I wish to enhance my React JS skills and work as a Front End Developer.`,
+    }
 ];

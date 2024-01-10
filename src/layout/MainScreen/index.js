@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Intro, Skill, About, Edu, Project, Contact, Exp } from '../../screens';
-
-function index() {
+// import Navbar from '../../screens/Navbar';
+// import { BrowserRouter as router,Link,Route } from 'react-router-dom';
+function MainScreen() {
     return (
-        <div>
+        <router>
+            {/* <Navbar /> */}
             <Intro />
             <Exp />
             <Project />
@@ -11,8 +13,8 @@ function index() {
             <Skill />
             <About />
             <Contact />
-        </div>
+        </router>
     )
 }
 
-export default index
+export default MainScreen

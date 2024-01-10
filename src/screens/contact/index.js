@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import './contact.css';
+import { Box } from '@mui/material';
 
 const Contact = () => {
 
- return (
+  const handleSubmit = () => {
+  }
+
+  return (
     <div className="container">
-      <form>
+      <Box>
+        <div id="contact-form" className="box-container">
+          <h2>Contact Me</h2>
+        </div>
+      </Box>
+      <form action="#" method="post" name="contact" data-netl="true" onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -18,7 +27,7 @@ const Contact = () => {
           type="email"
           id="email"
           name="email"
-         />
+        />
 
         <label htmlFor="subject">Subject</label>
         <input
@@ -36,7 +45,7 @@ const Contact = () => {
         <button type="submit">Send</button>
       </form>
     </div>
- );
+  );
 };
 
 export default Contact;

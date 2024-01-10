@@ -20,9 +20,9 @@ const Skill = () => {
     const getProgressColor = (leve) => {
         switch (leve) {
             case 'Beginner':
-                return '#FFA500'; // Orange
+                return '#FFFF00'; // Orange
             case 'Intermediate':
-                return '#FFFF00'; // Yellow
+                return '#FFA500'; // Yellow
             case 'High':
                 return '#008000'; // Green
             default:
@@ -31,9 +31,9 @@ const Skill = () => {
     };
 
     return (
-        <Box className="skill-page">
+        <Stack className="skill-container">
             <Typography variant="h2">Skills</Typography>
-            <Stack className="skill-container" spacing={2}>
+            <Box className="skill-page" spacing={2}>
                 {SkillData.map(skill => (
                     <Stack key={skill.id} className="skill" spacing={1}>
                         <img
@@ -47,12 +47,13 @@ const Skill = () => {
                             }}
                         />
                         <Typography variant="h5">{skill.name}</Typography>
-                        {/* <Typography variant="body2">{skill.leve}</Typography> */}
+                        <Typography variant="body2">{skill.leve}</Typography>
                         <Box sx={{ width: '100%', paddingTop: 1 }}>
                             <LinearProgress
                                 variant="determinate"
                                 value={getProgressValue(skill.leve)}
                                 sx={{
+                                    height: 16,
                                     '& .MuiLinearProgress-bar': {
                                         backgroundColor: getProgressColor(skill.leve)
                                     }
@@ -61,8 +62,8 @@ const Skill = () => {
                         </Box>
                     </Stack>
                 ))}
-            </Stack>
-        </Box>
+            </Box>
+        </Stack>
     );
 };
 
