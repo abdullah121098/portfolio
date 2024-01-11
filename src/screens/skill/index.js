@@ -31,7 +31,7 @@ const Skill = () => {
     };
 
     return (
-        <Stack className='skill-container'>
+        <Stack className='skill-container' sx={{ marginTop: 20 }}>
             <Box className='skill-page'>
                 <Typography variant="h4" align="center">Skills</Typography>
                 <Stack direction={{ xs: 'column', sm: 'row', }} className='skill' spacing={2}>

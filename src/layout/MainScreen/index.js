@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
 import { Header, Intro, Skill, About, Edu, Project, Contact, Experience } from '../../screens';
 import { Element } from 'react-scroll';
-
+import Main from './MainScreen';
 const MainScreen = () => {
     const scrollTo = (element) => {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -48,6 +48,7 @@ const MainScreen = () => {
                     Contact
                 </Button>
             </Box>
+            {/* <Main /> */}
         </Router>
     );
 };

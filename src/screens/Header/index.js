@@ -6,8 +6,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
     return (
-        <Box>
-            <AppBar position="fixed">
+        <Box sx={{ display: 'flex', }}>
+            <AppBar position="fixed"
+                sx={{
+                    backgroundColor: 'black',
+                    borderRadius: 20,
+                    marginTop: 6,
+                    zIndex: 1,
+                }}
+            >
                 <Toolbar>
                     {/* <IconButton edge="start" color="inherit" aria-label="menu">
                             <MenuIcon />
